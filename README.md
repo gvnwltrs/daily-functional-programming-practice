@@ -9,3 +9,6 @@ Just added a few test and simple pure functions to practice functional programmi
 
 ### Day 2: Tuesday, September 10, 2024 - Higher-Order Functions
 Starting with high-order functions today. Basically passing a function to another function or return a function from a function. 
+
+### Day 3: Wednesday, September 11, 2024 - Recursion
+Practicing some recursion today over using regular loops or conditionals. 
