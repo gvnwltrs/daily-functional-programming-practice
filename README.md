@@ -1,4 +1,4 @@
-# daily-functional-programming-practice
+# Daily Functional Programming Practice
 
 ## Goal: Simple implementations in 15-30 minutes or less for daily practice of functional programming and TDD principles. 
 
@@ -15,3 +15,6 @@ Practicing some recursion today over using regular loops or conditionals.
 
 ### Day 4: Thursday, September 12, 2024 - Functional Composition & Currying
 Function Composition and currying are primarily associated with higher-order functions. Function composition combines two or more functions into one function, and currying is the process of taking a current function that takes many arguments and breaking it out to multiple functions that take only a single argument. 
+
+### Day 5: Friday, September 13, 2024 - Immutability & Data Transformations
+Today I am going to focus on transforming data structures without mutating the original data. This relates back to the "pure functions" aspect of functional programming. Pure functions, for the same input given, should always return the same output. Immutability means, that once the data is created, it cannot change. Immutability reinforces the concept of a pure function, where functions can not modify the actual data structures directly -- instead they make a copy of the data structure and returns any modifications it makes of the copy, not the original or "real" data structure. 
