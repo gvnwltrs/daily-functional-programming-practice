@@ -12,3 +12,6 @@ Starting with high-order functions today. Basically passing a function to anothe
 
 ### Day 3: Wednesday, September 11, 2024 - Recursion
 Practicing some recursion today over using regular loops or conditionals. 
+
+### Day 4: Thursday, September 12, 2024 - Functional Composition & Currying
+Function Composition and currying are primarily associated with higher-order functions. Function composition combines two or more functions into one function, and currying is the process of taking a current function that takes many arguments and breaking it out to multiple functions that take only a single argument. 
