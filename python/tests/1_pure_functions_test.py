@@ -1,16 +1,25 @@
 import unittest
-from pure_functions import math_calc
+from pure_functions.math_calc import add, subtract, multiply, divide
+from pure_functions.other import get_date, create_date_msg
 
 class TestPureFunctions(unittest.TestCase):
     def test_addition(self):
-        self.assertEqual(math_calc.add(1, 2), 3)
+        self.assertEqual(add(1, 2), 3)
 
     def test_subtraction(self):
-        self.assertEqual(math_calc.subtract(2, 1), 1)
+        self.assertEqual(subtract(2, 1), 1)
 
     def test_multiplication(self):
-        self.assertEqual(math_calc.multiply(2, 3), 6)
+        self.assertEqual(multiply(2, 3), 6)
 
     def test_division(self):
-        self.assertEqual(math_calc.divide(6, 3), 2)
+        self.assertEqual(divide(6, 3), 2)
+
+    def test_using_calendar_date_from_the_impure(self):
+        date = get_date()
+        date_msg = create_date_msg(date) 
+        expect = f'Today is {date}'
+        self.assertEqual(date_msg, expect)
+
+
 

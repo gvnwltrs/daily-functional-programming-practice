@@ -24,3 +24,7 @@ Again relates to keeping functions "pure". A pure function cannot produce side e
 
 ### Day 7: Rest
 
+### Day 8: Monday, September 16, 2024 - Pure Functions
+More practice with pure functions. Getting used to forming functions without side effects. A pure function should always take at least one input, not modify or interact with anything external to it, and return something.  
+
+### Day 9: Tuesday, September 17, 2024 - Higher-Order Functions
