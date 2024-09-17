@@ -28,3 +28,5 @@ Again relates to keeping functions "pure". A pure function cannot produce side e
 More practice with pure functions. Getting used to forming functions without side effects. A pure function should always take at least one input, not modify or interact with anything external to it, and return something.  
 
 ### Day 9: Tuesday, September 17, 2024 - Higher-Order Functions
+Today I want to focus on extending functions. The goal is to practice situations where I may need to modify someone else's (or my own) code, but want to be minimally invasive about it by not directly modifying it (wrapper or decorator). 
+
