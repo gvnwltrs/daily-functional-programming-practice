@@ -30,3 +30,5 @@ More practice with pure functions. Getting used to forming functions without sid
 ### Day 9: Tuesday, September 17, 2024 - Higher-Order Functions
 Today I want to focus on extending functions. The goal is to practice situations where I may need to modify someone else's (or my own) code, but want to be minimally invasive about it by not directly modifying it (wrapper or decorator). 
 
+### Day 10: Wednesday, September 18, 2024 - Recursion
+More recursion! Nice to have an approach to handle loops or iterations in a cleaner, and at times more efficient. This is no one size fits all approach, but I believe it's a good approach to have ready in the toolbox for many cases that won't produce as stack overflow (especially if the programming language uses Tail Recursion Optimization). 
