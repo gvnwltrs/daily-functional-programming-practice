@@ -1,6 +1,7 @@
 import unittest
 
 from higher_order_functions import composition_and_curry as cc
+from higher_order_functions.other import ask_question, now_handle_the_question 
 
 class TestCompositionAndCurry(unittest.TestCase):
 
@@ -14,4 +15,9 @@ class TestCompositionAndCurry(unittest.TestCase):
         input = 2
         test = setup(input)
         expected_result = 7
+        self.assertEqual(test == expected_result, True)
+    
+    def test_question_and_response(self):
+        expected_result = "Q: What is my name? || R: Your name is John Doe."
+        test = ask_question("What is my name", now_handle_the_question)
         self.assertEqual(test == expected_result, True)
