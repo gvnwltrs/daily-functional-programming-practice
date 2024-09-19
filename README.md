@@ -34,4 +34,4 @@ Today I want to focus on extending functions. The goal is to practice situations
 More recursion! Nice to have an approach to handle loops or iterations in a cleaner, and at times more efficient. This is no one size fits all approach, but I believe it's a good approach to have ready in the toolbox for many cases that won't produce as stack overflow (especially if the programming language uses Tail Recursion Optimization). 
 
 ### Day 11: Thursday, September 19, 2024 - Function Composition & Currying 
-Another day of practicing composition and currying. Yesterday, not the best. I implemented the 
+Another day of practicing composition and currying. Yesterday, not the best. I implemented recursion with impure and pure functions in what felt like a sloppy way. Maybe I can redeem myself a bit today.  
