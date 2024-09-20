@@ -35,3 +35,6 @@ More recursion! Nice to have an approach to handle loops or iterations in a clea
 
 ### Day 11: Thursday, September 19, 2024 - Function Composition & Currying 
 Another day of practicing composition and currying. Yesterday, not the best. I implemented recursion with impure and pure functions in what felt like a sloppy way. Maybe I can redeem myself a bit today.  
+
+### Day 12: Friday, September 20, 2024 - Immutability & Data Transformation
+This is a practice of keeping functions pure. With this exercise, I utilize data structures given by pure/impure functions, but do not modify the original. Not very successful with this one today. I am trying to approach this using "closures" to handle state inside of impure functions, but messed it up. Will fix this tomorrow... 😔
