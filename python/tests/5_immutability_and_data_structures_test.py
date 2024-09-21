@@ -1,6 +1,6 @@
 import unittest
 
-from pure_functions.modify_data_structure import add_to_list, access_copy_of_call_log, update_request_for_call_log, handle_call_log_update 
+from pure_functions.modify_data_structure import add_to_list, update_call_log 
 
 class TestImmutabilityAndDataStructures(unittest.TestCase):
 
@@ -13,14 +13,14 @@ class TestImmutabilityAndDataStructures(unittest.TestCase):
         self.assertIsNot(test, expected_result) 
     
     def test_update_the_call_log(self):
-        call_log = access_copy_of_call_log()
-        request = update_request_for_call_log(call_log, '2021-08-10', '12:00', 'Call with John')
-        handle_call_log_update(request)
-        recent_call_log_update = access_copy_of_call_log("2021-08-10", "12:00")
-        expected_result = {
-            '2021-08-10': {
-                '12:00': 'Call with John'
-            }
-        }
-        self.assertEqual(recent_call_log_update, expected_result)
+        call_log = { '2021-08-10': { '10:00': 'Call with Jane' } } 
+        updated_call_log = update_call_log(call_log, '2021-08-11', '12:00', 'Call with John')
+        expected_result = { '2021-08-11': { '12:00': 'Call with John' } }
+        self.assertEqual(updated_call_log, expected_result)
+    
+    def test_update_the_call_log_is_not_modifying_the_orginal(self):
+        call_log = { '2021-08-10': { '10:00': 'Call with Jane' } } 
+        updated_call_log = update_call_log(call_log, '2021-08-11', '12:00', 'Call with John')
+        self.assertIsNot(updated_call_log, call_log)
+
         

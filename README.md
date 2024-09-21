@@ -38,3 +38,8 @@ Another day of practicing composition and currying. Yesterday, not the best. I i
 
 ### Day 12: Friday, September 20, 2024 - Immutability & Data Transformation
 This is a practice of keeping functions pure. With this exercise, I utilize data structures given by pure/impure functions, but do not modify the original. Not very successful with this one today. I am trying to approach this using "closures" to handle state inside of impure functions, but messed it up. Will fix this tomorrow... 😔
+
+### Day 13: Saturday, September 21, 2024 - Side Effects & IO Handling
+Short run today (it is Saturday after all). I think I redeemed myself a bit from yesterday by doing the thing simply. I was trying to manage state in a closure, but ended up making it too complicated and really, using closures is outside of the inteneded scope of the exercise for immutabiltiy & data transformation anyway. Also did today's intended exercise to hanle IO in a way that isolates side effects (impure functions) from pure functions, where the pure function only uses the output of the side effect to do its thing. 
+
+### Day 14: Sunday, September 22, 2024 - Rest 

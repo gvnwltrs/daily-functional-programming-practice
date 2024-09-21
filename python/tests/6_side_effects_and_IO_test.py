@@ -1,12 +1,18 @@
 import unittest
 
-from pure_functions import side_effects_and_IO as pf
+from pure_functions.side_effects_and_IO import get_file, count_words, count_lines 
 
 class TestSideEffectsAndIO(unittest.TestCase):
 
     # How to isolate a side effect from a pure function
     def test_side_effect_handling(self):
         file_word_count = 5
-        side_effect_output = pf.get_file()
-        test = pf.count_words(side_effect_output)
+        side_effect_output = get_file()
+        test = count_words(side_effect_output)
         self.assertEqual(test, file_word_count)
+
+    def test_count_lines(self):
+        file_line_count = 5
+        side_effect_output = get_file()
+        test = count_lines(side_effect_output) 
+        self.assertEqual(test, file_line_count)

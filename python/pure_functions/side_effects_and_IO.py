@@ -5,3 +5,6 @@ def get_file():
 
 def count_words(text):
     return len(text.split())
+
+def count_lines(text):
+    return len(text.split('\n'))
