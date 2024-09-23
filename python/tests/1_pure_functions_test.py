@@ -1,6 +1,6 @@
 import unittest
 from pure_functions.math_calc import add, subtract, multiply, divide
-from pure_functions.other import get_date, create_date_msg
+from pure_functions.other import get_date, create_date_msg, modify_or_access_name, get_name, append_to_name 
 
 class TestPureFunctions(unittest.TestCase):
     def test_addition(self):
@@ -21,5 +21,15 @@ class TestPureFunctions(unittest.TestCase):
         expect = f'Today is {date}'
         self.assertEqual(date_msg, expect)
 
+    def test_add_name(self):
+        set_name = modify_or_access_name()
+        self.assertEqual(set_name('John'), 'John')
+    
+    def test_add_last_name(self):
+        setup_name = modify_or_access_name()
+        setup_name('John')
+        name = get_name(setup_name)
+        new_name = append_to_name(name)
+        self.assertEqual(new_name, 'John Doe')
 
 

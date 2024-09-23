@@ -43,3 +43,6 @@ This is a practice of keeping functions pure. With this exercise, I utilize data
 Short run today (it is Saturday after all). I think I redeemed myself a bit from yesterday by doing the thing simply. I was trying to manage state in a closure, but ended up making it too complicated and really, using closures is outside of the inteneded scope of the exercise for immutabiltiy & data transformation anyway. Also did today's intended exercise to hanle IO in a way that isolates side effects (impure functions) from pure functions, where the pure function only uses the output of the side effect to do its thing. 
 
 ### Day 14: Sunday, September 22, 2024 - Rest 
+
+### Day 15: Monday, September 23, 2024 - Pure Functions 
+Not the greatest, but still tried to use impure functions to modify state then added a pure function to add to a name that was returned by the impure function. 
