@@ -46,3 +46,6 @@ Short run today (it is Saturday after all). I think I redeemed myself a bit from
 
 ### Day 15: Monday, September 23, 2024 - Pure Functions 
 Not the greatest, but still tried to use impure functions to modify state then added a pure function to add to a name that was returned by the impure function. 
+
+### Day 16: Tuesday, September 24, 2024 - Higher-Order Functions
+Did it simply again today. Just using two pure functions as defaults into the pure function to modify the text or string. 
