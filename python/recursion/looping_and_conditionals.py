@@ -24,3 +24,13 @@ def ordered_list(arr_list, index=0) -> bool:
 def setup_print(text, count):
     # Optional: Add more behavior here if you want to tweak or format this for a certain use case
     return [text, count]
+
+def count_number_of_items_found(list, filter, count=0):
+    if len(list) == 0:
+        return count
+
+    if list[0] == filter:
+        count += 1
+
+    return count_number_of_items_found(list[1:], filter, count)
+

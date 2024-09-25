@@ -1,5 +1,5 @@
 import unittest
-from recursion.looping_and_conditionals import print_loop, ordered_list, setup_print 
+from recursion.looping_and_conditionals import print_loop, ordered_list, setup_print, count_number_of_items_found 
 
 class TestRecursion(unittest.TestCase):
 
@@ -23,3 +23,11 @@ class TestRecursion(unittest.TestCase):
         text, count = print_loop(*print_loop_args)
         # Now we'll check this impure function operation based on what it returns
         self.assertEqual([test_text, 0], [text, count])
+
+    def test_items_filter_count(self):
+        fruit_list = ["apple", "banana", "cherry", "kiwi", "mango", "mango", "apple", "banana", "banana"]
+        filter = "banana"
+        test = count_number_of_items_found(fruit_list, filter)
+        expect = 3
+        self.assertEqual(test, expect)
+

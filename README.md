@@ -49,3 +49,6 @@ Not the greatest, but still tried to use impure functions to modify state then a
 
 ### Day 16: Tuesday, September 24, 2024 - Higher-Order Functions
 Did it simply again today. Just using two pure functions as defaults into the pure function to modify the text or string. 
+
+### Day 17: Wednesday, September 25, 2024 - Recursion
+Simple filter that counts the number found for the target item in a list. 
