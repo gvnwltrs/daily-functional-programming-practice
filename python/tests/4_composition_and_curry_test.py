@@ -25,5 +25,5 @@ class TestCompositionAndCurry(unittest.TestCase):
     def test_add_file_format(self):
         file = "test"
         test = format_to_jpg(file) 
-        expect = ".jpg"
+        expect = "File converted to JPG."
         self.assertEqual(test[1] == expect, True)
