@@ -52,3 +52,10 @@ Did it simply again today. Just using two pure functions as defaults into the pu
 
 ### Day 17: Wednesday, September 25, 2024 - Recursion
 Simple filter that counts the number found for the target item in a list. 
+
+### Day 18: Thursday, September 26, 2024 - Function Composition & Currying
+Just currying today with a .jpg file format add to file name. 
+
+### Day 19: Friday, September 27, 2024 - Immutability & Data Transformation 
+
+### Day 20: Saturday, September 28, 2024 - Side Effects & IO Handling  

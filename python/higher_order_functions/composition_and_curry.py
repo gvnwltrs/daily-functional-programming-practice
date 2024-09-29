@@ -18,3 +18,9 @@ def _add_5(a, b):
 # Curried Function
 def add_5(a):
     return lambda b: a + b # Since this returns a function, whatever we set the lambda to will be the second argument always; b is each new call to the function
+
+def to_jpg(file):
+    return file + ".jpg", ".jpg"
+
+def format_to_jpg(file):
+    return to_jpg(file)
