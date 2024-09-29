@@ -60,3 +60,4 @@ Just currying today with a .jpg file format add to file name.
 Adding an item to a copy of a list from a function that generates a list then using another function to modify that list for a new list. 
 
 ### Day 20: Saturday, September 28, 2024 - Side Effects & IO Handling  
+Setup for getting the host machines ip address, returning it, then modifying it by adding a port number. 

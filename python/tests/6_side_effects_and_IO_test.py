@@ -1,6 +1,12 @@
 import unittest
 
-from pure_functions.side_effects_and_IO import get_file, count_words, count_lines 
+from pure_functions.side_effects_and_IO import (
+    get_file, 
+    count_words, 
+    count_lines, 
+    get_ip_address,
+    add_port_number
+)
 
 class TestSideEffectsAndIO(unittest.TestCase):
 
@@ -16,3 +22,9 @@ class TestSideEffectsAndIO(unittest.TestCase):
         side_effect_output = get_file()
         test = count_lines(side_effect_output) 
         self.assertEqual(test, file_line_count)
+    
+    def test_add_port_number(self):
+        ip_address = get_ip_address()
+        test = add_port_number(ip_address, 80)
+        expect = ip_address + ':80'
+        self.assertEqual(test, expect)
