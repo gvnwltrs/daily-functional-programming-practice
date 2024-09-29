@@ -1,6 +1,7 @@
 import unittest
 
 from pure_functions.modify_data_structure import add_to_list, update_call_log 
+from pure_functions.immutability_and_data_structures import get_order_numbers, update_order_numbers 
 
 class TestImmutabilityAndDataStructures(unittest.TestCase):
 
@@ -22,5 +23,12 @@ class TestImmutabilityAndDataStructures(unittest.TestCase):
         call_log = { '2021-08-10': { '10:00': 'Call with Jane' } } 
         updated_call_log = update_call_log(call_log, '2021-08-11', '12:00', 'Call with John')
         self.assertIsNot(updated_call_log, call_log)
+    
+    def test_add_new_order_number(self):
+        order_numbers = get_order_numbers()
+        test = update_order_numbers(order_numbers, "007")
+        expect = ["001", "002", "003", "007"]
+        self.assertEqual(test, expect)
+        self.assertIsNot(test, order_numbers)
 
         

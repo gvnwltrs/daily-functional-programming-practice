@@ -57,5 +57,6 @@ Simple filter that counts the number found for the target item in a list.
 Just currying today with a .jpg file format add to file name. 
 
 ### Day 19: Friday, September 27, 2024 - Immutability & Data Transformation 
+Adding an item to a copy of a list from a function that generates a list then using another function to modify that list for a new list. 
 
 ### Day 20: Saturday, September 28, 2024 - Side Effects & IO Handling  
