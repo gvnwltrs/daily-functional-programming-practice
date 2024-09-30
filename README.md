@@ -61,3 +61,8 @@ Adding an item to a copy of a list from a function that generates a list then us
 
 ### Day 20: Saturday, September 28, 2024 - Side Effects & IO Handling  
 Setup for getting the host machines ip address, returning it, then modifying it by adding a port number. 
+
+### Day 21: Sunday, September 29, 2024 - Rest
+
+### Day 22: Monday, September 30, 2024 - Pure Functions
+Checking to see if username exists. Ideally, I would be accessing the usernames with an impure function to get a copy of names in a database or some other data structure somewhere. But for today, this store of valid usernames is contained within the function that checks for them itself. 

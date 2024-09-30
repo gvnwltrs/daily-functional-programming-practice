@@ -1,6 +1,19 @@
 import unittest
-from pure_functions.math_calc import add, subtract, multiply, divide
-from pure_functions.other import get_date, create_date_msg, modify_or_access_name, get_name, append_to_name 
+from pure_functions.pure_functions import (
+    add, 
+    subtract, 
+    multiply, 
+    divide,
+    see_if_username_exists
+)
+
+from pure_functions.other import (
+    get_date, 
+    create_date_msg, 
+    modify_or_access_name, 
+    get_name, 
+    append_to_name 
+)
 
 class TestPureFunctions(unittest.TestCase):
     def test_addition(self):
@@ -31,5 +44,9 @@ class TestPureFunctions(unittest.TestCase):
         name = get_name(setup_name)
         new_name = append_to_name(name)
         self.assertEqual(new_name, 'John Doe')
+
+    def test_user_name_exists(self):
+        result = see_if_username_exists('John')
+        self.assertTrue(result)
 
 
