@@ -1,6 +1,15 @@
 import unittest
-from higher_order_functions.math_calc import square, get_cubed
-from higher_order_functions.other import capitalize_and_underscore_spaces, to_uppercase, underscore_spaces
+from higher_order_functions.higher_order_functions import (
+    square, 
+    get_cubed,
+    turn_off_air_conditioner
+)
+
+from higher_order_functions.other import (
+    capitalize_and_underscore_spaces, 
+    to_uppercase, 
+    underscore_spaces
+)
 
 class TestHigherOrderFunctions(unittest.TestCase):
 
@@ -29,3 +38,9 @@ class TestHigherOrderFunctions(unittest.TestCase):
         expect = "HELLO_WORLD"
         handler = capitalize_and_underscore_spaces()
         self.assertEqual(handler(input), expect)
+    
+    def test_turn_off_air_conditioner(self):
+        temperature_update = "72F"
+        result = turn_off_air_conditioner(temperature_update)
+        expect = True
+        self.assertEqual(result, expect)

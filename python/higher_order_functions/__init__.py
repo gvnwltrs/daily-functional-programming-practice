@@ -1,1 +1,5 @@
-from . import math_calc, composition_and_curry, other
+from . import (
+    higher_order_functions, 
+    composition_and_curry, 
+    other
+)
