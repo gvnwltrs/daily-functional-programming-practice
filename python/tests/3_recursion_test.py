@@ -1,5 +1,8 @@
 import unittest
 from recursion.looping_and_conditionals import print_loop, ordered_list, setup_print, count_number_of_items_found 
+from recursion.recursion import (
+    calculate_average
+)
 
 class TestRecursion(unittest.TestCase):
 
@@ -30,4 +33,10 @@ class TestRecursion(unittest.TestCase):
         test = count_number_of_items_found(fruit_list, filter)
         expect = 3
         self.assertEqual(test, expect)
+    
+    def test_calculate_average_for_home_prices(self):
+        house_prices = [100000, 200000, 300000, 400000, 500000]
+        result = calculate_average(house_prices)
+        expect = 300000
+        self.assertEqual(result, expect)
 
