@@ -72,3 +72,6 @@ Higher-Order functions can either take in another function, or return another fu
 
 ### Day 24: Wednesday, October 2, 2024 - Recursion
 Used recursion today to calculate the average a list of home price values. The recursive function is generic though, in that it could be used to calculate the averages of other lists of int values. It returns the average as an int. If I wanted to format this output specifically for the house price averages, I could add a decorator in the future to modify it that way -- so it's extendable in this way. The recursive function itself has default arguments to help track the sum and the count of elements to produce the average. This could probably be done differently, maybe using a closure to make the function a one argument function. 
+
+### Day 25: Thursday, October 3, 2024 - Composition & Currying
+Made a curried function for formatting and combining size and weight details for a person. The original simply took in a size and weight integer. The composed and curried version takes in two separate functions that handle the formatting or other calculations for size and weight separately (which wil allow for future functions to be added for extension such as different formats, calculations, etc. given the use case). 

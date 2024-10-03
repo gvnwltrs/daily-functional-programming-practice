@@ -1,6 +1,14 @@
 import unittest
 
-from higher_order_functions.composition_and_curry import square_then_add_one, add_5, format_to_jpg
+from higher_order_functions.composition_and_curry import (
+    square_then_add_one, add_5, 
+    format_to_jpg,
+    generate_size_and_weight_profile,
+    generate_size_and_weight_profile_enhanced,
+    generate_size_output,
+    generate_weight_output
+)
+
 from higher_order_functions.other import ask_question, now_handle_the_question 
 
 class TestCompositionAndCurry(unittest.TestCase):
@@ -27,3 +35,14 @@ class TestCompositionAndCurry(unittest.TestCase):
         test = format_to_jpg(file) 
         expect = "File converted to JPG."
         self.assertEqual(test[1] == expect, True)
+    
+    def test_size_and_weight_composition_regular(self):
+        result = generate_size_and_weight_profile(72, 200)
+        expect = {'size': '6ft', 'weight': '200lbs'}
+        self.assertTrue(result == expect)
+
+    def test_size_and_weight_curried(self):
+        composed_setup = generate_size_and_weight_profile_enhanced(generate_size_output, generate_weight_output)
+        result = composed_setup(72, 200)
+        expect = {'size': '6ft', 'weight': '200lbs'}
+        self.assertTrue(result == expect)

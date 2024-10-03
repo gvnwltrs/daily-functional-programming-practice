@@ -1,4 +1,4 @@
-
+from typing import Callable
 
 # Pure Functions
 def square(x):
@@ -24,3 +24,17 @@ def to_jpg(file):
 
 def format_to_jpg(file):
     return to_jpg(file)
+
+def generate_size_output(size_inches):
+    return { "size": str(size_inches // 12) + "ft" }
+
+def generate_weight_output(weight_lbs):
+    return { "weight": str(weight_lbs) + "lbs" }
+
+def generate_size_and_weight_profile(size_inches, weight_lbs):
+    size = str(size_inches // 12) + "ft"
+    weight = str(weight_lbs) + "lbs"
+    return {"size": size, "weight": weight}
+
+def generate_size_and_weight_profile_enhanced(size_output: Callable[[int], int], weight_output: Callable[[int], int]):
+    return lambda size, weight: size_output(size) | weight_output(weight)
