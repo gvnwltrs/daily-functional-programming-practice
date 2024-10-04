@@ -75,3 +75,6 @@ Used recursion today to calculate the average a list of home price values. The r
 
 ### Day 25: Thursday, October 3, 2024 - Composition & Currying
 Made a curried function for formatting and combining size and weight details for a person. The original simply took in a size and weight integer. The composed and curried version takes in two separate functions that handle the formatting or other calculations for size and weight separately (which wil allow for future functions to be added for extension such as different formats, calculations, etc. given the use case). 
+
+### Day 26: Friday, October 4, 2024 - Immutability & Data Structures
+To practice this, I set up a simple data structure for a hypothetical restaurant order menu that is processed in a pure function to determine the final price. This promotes extensibility where there could potentially be another managing function that determines the location of the purchase to appropriately apply the sales tax in the final price based on the location of the purchase. 

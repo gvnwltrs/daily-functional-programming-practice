@@ -1,7 +1,11 @@
 import unittest
 
 from pure_functions.modify_data_structure import add_to_list, update_call_log 
-from pure_functions.immutability_and_data_structures import get_order_numbers, update_order_numbers 
+from pure_functions.immutability_and_data_structures import (
+    get_order_numbers, 
+    update_order_numbers,
+    calculate_sales_price 
+)
 
 class TestImmutabilityAndDataStructures(unittest.TestCase):
 
@@ -31,4 +35,18 @@ class TestImmutabilityAndDataStructures(unittest.TestCase):
         self.assertEqual(test, expect)
         self.assertIsNot(test, order_numbers)
 
-        
+    def test_calculate_sales_price(self):
+        data_structure = {
+            "item_1": {
+                "product:": "Burger",
+                "price": 10.00
+            },
+            "item_2": {
+                "product:": "Fries",
+                "price": 5.00
+            }
+        }
+
+        result = calculate_sales_price(data_structure['item_1']['price'])
+        expect = 11.49
+        self.assertEqual(result, expect)

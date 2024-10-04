@@ -12,3 +12,7 @@ def set_port_number(ip_address, port_number):
  
 def update_order_numbers(order_numbers, new_order_number):
     return order_numbers + [new_order_number]
+
+def calculate_sales_price(price):
+    tax = 0.149
+    return price + (price * tax)
