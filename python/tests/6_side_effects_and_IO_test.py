@@ -5,7 +5,9 @@ from pure_functions.side_effects_and_IO import (
     count_words, 
     count_lines, 
     get_ip_address,
-    add_port_number
+    add_port_number,
+    fetch_weather,
+    todays_location_and_temperature_forecast,
 )
 
 class TestSideEffectsAndIO(unittest.TestCase):
@@ -28,3 +30,9 @@ class TestSideEffectsAndIO(unittest.TestCase):
         test = add_port_number(ip_address, 80)
         expect = ip_address + ':80'
         self.assertEqual(test, expect)
+
+    def test_get_weather_temp_for_location(self):
+        michigan_weather_data = fetch_weather('Michigan')
+        result = todays_location_and_temperature_forecast(michigan_weather_data)
+        expect = f"The temperature for today in Michigan is {michigan_weather_data.temperature} degrees"
+        self.assertEqual(result, expect)

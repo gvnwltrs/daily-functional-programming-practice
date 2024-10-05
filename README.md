@@ -78,3 +78,6 @@ Made a curried function for formatting and combining size and weight details for
 
 ### Day 26: Friday, October 4, 2024 - Immutability & Data Structures
 To practice this, I set up a simple data structure for a hypothetical restaurant order menu that is processed in a pure function to determine the final price. This promotes extensibility where there could potentially be another managing function that determines the location of the purchase to appropriately apply the sales tax in the final price based on the location of the purchase. 
+
+### Day 27: Saturday, October 5, 2024 - Side Effects & IO 
+Made a weather web API call today with a side effect based function (impure) and used the data gathered from it to output the forecast with a pure function where the output is a formatted string for a "Today's" weather temperature output for the given location. 
