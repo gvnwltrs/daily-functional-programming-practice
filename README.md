@@ -81,3 +81,10 @@ To practice this, I set up a simple data structure for a hypothetical restaurant
 
 ### Day 27: Saturday, October 5, 2024 - Side Effects & IO 
 Made a weather web API call today with a side effect based function (impure) and used the data gathered from it to output the forecast with a pure function where the output is a formatted string for a "Today's" weather temperature output for the given location. 
+
+### Day 28: Sunday, October 6, 2024 - Rest
+
+### Day 29: Monday, October 7, 2024 - Pure Functions
+It seems hard at times to come up with ideas for pure functions outside of mathematical operations. It seems to be more the case that pure functions are generally more applicable in the case of using an impure function or operation first that returns a thing to then act on the result with a pure function. Today I made a pure function that simply calculates speed. 
+
+

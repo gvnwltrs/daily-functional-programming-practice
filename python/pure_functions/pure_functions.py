@@ -15,3 +15,6 @@ def divide(num_1: int, num_2: int) -> int:
 def see_if_username_exists(name):
     valid_names = ['John', 'Jane', 'Doe']
     return name in valid_names
+
+def calculate_speed(distance: int, time: int) -> int:
+    return distance / time

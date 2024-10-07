@@ -1,4 +1,5 @@
 import unittest
+import warnings
 
 from pure_functions.side_effects_and_IO import (
     get_file, 
@@ -35,4 +36,5 @@ class TestSideEffectsAndIO(unittest.TestCase):
         michigan_weather_data = fetch_weather('Michigan')
         result = todays_location_and_temperature_forecast(michigan_weather_data)
         expect = f"The temperature for today in Michigan is {michigan_weather_data.temperature} degrees"
+        warnings.simplefilter("ignore", DeprecationWarning)
         self.assertEqual(result, expect)

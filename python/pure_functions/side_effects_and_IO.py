@@ -14,7 +14,6 @@ async def get_todays_weather_temp_for_location(location: str):
 
     async with python_weather.Client(unit=python_weather.IMPERIAL) as client:
         weather = await client.get(location)
-        print(weather)
         await client.close()
         return weather
 

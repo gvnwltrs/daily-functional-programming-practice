@@ -4,7 +4,8 @@ from pure_functions.pure_functions import (
     subtract, 
     multiply, 
     divide,
-    see_if_username_exists
+    see_if_username_exists,
+    calculate_speed,
 )
 
 from pure_functions.other import (
@@ -48,5 +49,10 @@ class TestPureFunctions(unittest.TestCase):
     def test_user_name_exists(self):
         result = see_if_username_exists('John')
         self.assertTrue(result)
+
+    def test_speed_calculation(self):
+        result = calculate_speed(100, 10)
+        expect = 10
+        self.assertTrue(result, expect)
 
 
