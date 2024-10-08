@@ -2,13 +2,14 @@ import unittest
 from higher_order_functions.higher_order_functions import (
     square, 
     get_cubed,
-    turn_off_air_conditioner
+    turn_off_air_conditioner,
+    select_investment_temperament,
 )
 
 from higher_order_functions.other import (
     capitalize_and_underscore_spaces, 
     to_uppercase, 
-    underscore_spaces
+    underscore_spaces,
 )
 
 class TestHigherOrderFunctions(unittest.TestCase):
@@ -43,4 +44,9 @@ class TestHigherOrderFunctions(unittest.TestCase):
         temperature_update = "72F"
         result = turn_off_air_conditioner(temperature_update)
         expect = True
+        self.assertEqual(result, expect)
+
+    def test_investment_balancer(self):
+        result = select_investment_temperament()
+        expect = "Conservative: 20% stocks, 80% bonds"
         self.assertEqual(result, expect)

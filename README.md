@@ -87,4 +87,5 @@ Made a weather web API call today with a side effect based function (impure) and
 ### Day 29: Monday, October 7, 2024 - Pure Functions
 It seems hard at times to come up with ideas for pure functions outside of mathematical operations. It seems to be more the case that pure functions are generally more applicable in the case of using an impure function or operation first that returns a thing to then act on the result with a pure function. Today I made a pure function that simply calculates speed. 
 
-
+### Day 30: Tuesday, October 8, 2024 - Higher-Order Functions
+Technically the last day of practicing with Python. I will continue for one more month though to solidify this more. Added feature to output an investment portfolio distribution based on a person's temperament. 

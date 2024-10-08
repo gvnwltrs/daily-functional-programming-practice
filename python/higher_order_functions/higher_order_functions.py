@@ -17,3 +17,11 @@ def turn_off_air_conditioner(temperature_update, func=trigger_turn_air_condition
     if temperature_update == set_point:
         return func()
     return False
+
+def select_investment_temperament(option=None):
+    return investment_balancer(option)
+
+def investment_balancer(option):
+    if option == "Aggressive":
+        return "Aggressive: 50% stocks, 50% bonds"
+    return "Conservative: 20% stocks, 80% bonds"
