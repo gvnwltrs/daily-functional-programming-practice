@@ -1,7 +1,8 @@
 import unittest
 from recursion.looping_and_conditionals import print_loop, ordered_list, setup_print, count_number_of_items_found 
 from recursion.recursion import (
-    calculate_average
+    calculate_average,
+    high_payment_events,
 )
 
 class TestRecursion(unittest.TestCase):
@@ -38,5 +39,11 @@ class TestRecursion(unittest.TestCase):
         house_prices = [100000, 200000, 300000, 400000, 500000]
         result = calculate_average(house_prices)
         expect = 300000
+        self.assertEqual(result, expect)
+
+    def test_count_high_payment_amounts(self):
+        data = [500, 100, 111, 200, 600, 700, 100]
+        result = high_payment_events(data) # default high payment is 200
+        expect = 4
         self.assertEqual(result, expect)
 

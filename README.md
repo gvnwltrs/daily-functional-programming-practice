@@ -89,3 +89,6 @@ It seems hard at times to come up with ideas for pure functions outside of mathe
 
 ### Day 30: Tuesday, October 8, 2024 - Higher-Order Functions
 Technically the last day of practicing with Python. I will continue for one more month though to solidify this more. Added feature to output an investment portfolio distribution based on a person's temperament. 
+
+## Day 31: Wednesday, October 9, 2024 - Recursion
+Calculating high payment events using recursion. The single function simply takes in a list of integers, and uses defaults to determine what "high" is and outputs the count of events that exceeds that limit. 
