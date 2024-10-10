@@ -38,3 +38,6 @@ def generate_size_and_weight_profile(size_inches, weight_lbs):
 
 def generate_size_and_weight_profile_enhanced(size_output: Callable[[int], int], weight_output: Callable[[int], int]):
     return lambda size, weight: size_output(size) | weight_output(weight)
+
+def curry_add(a):
+    return lambda b: lambda c: a + b + c

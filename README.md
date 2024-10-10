@@ -92,3 +92,6 @@ Technically the last day of practicing with Python. I will continue for one more
 
 ## Day 31: Wednesday, October 9, 2024 - Recursion
 Calculating high payment events using recursion. The single function simply takes in a list of integers, and uses defaults to determine what "high" is and outputs the count of events that exceeds that limit. 
+
+## Day 32: Thursday, October 10, 2024 - Function Composition & Currying
+Okay, so maybe I haven't been currying. I just realized I largely misunderstood what currying is compared to function composition... So, today I actually made a curried function for the first time just with adding up sums. I made a few different units tests to make sure I actually understand this using different "pre-fill" scenarios. 
