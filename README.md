@@ -90,8 +90,11 @@ It seems hard at times to come up with ideas for pure functions outside of mathe
 ### Day 30: Tuesday, October 8, 2024 - Higher-Order Functions
 Technically the last day of practicing with Python. I will continue for one more month though to solidify this more. Added feature to output an investment portfolio distribution based on a person's temperament. 
 
-## Day 31: Wednesday, October 9, 2024 - Recursion
+### Day 31: Wednesday, October 9, 2024 - Recursion
 Calculating high payment events using recursion. The single function simply takes in a list of integers, and uses defaults to determine what "high" is and outputs the count of events that exceeds that limit. 
 
-## Day 32: Thursday, October 10, 2024 - Function Composition & Currying
+### Day 32: Thursday, October 10, 2024 - Function Composition & Currying
 Okay, so maybe I haven't been currying. I just realized I largely misunderstood what currying is compared to function composition... So, today I actually made a curried function for the first time just with adding up sums. I made a few different units tests to make sure I actually understand this using different "pre-fill" scenarios. 
+
+### Day 33: Friday, October 11, 2024 - Immutability & Data Transformations 
+Passing an input of a dictionary that contains a list of dictionaries for a bunch of events. The goal is to delete all the event entries except for the last one. Instead of taking the data structure and modifying the original, we get a copy of it and slice the entries out except for the last one to return a new data structure for events. 

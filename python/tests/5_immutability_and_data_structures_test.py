@@ -4,7 +4,8 @@ from pure_functions.modify_data_structure import add_to_list, update_call_log
 from pure_functions.immutability_and_data_structures import (
     get_order_numbers, 
     update_order_numbers,
-    calculate_sales_price 
+    calculate_sales_price, 
+    clear_events_up_to_last, 
 )
 
 class TestImmutabilityAndDataStructures(unittest.TestCase):
@@ -49,4 +50,18 @@ class TestImmutabilityAndDataStructures(unittest.TestCase):
 
         result = calculate_sales_price(data_structure['item_1']['price'])
         expect = 11.49
+        self.assertEqual(result, expect)
+    
+    def test_delete_all_data_events_except_for_last(self):
+        data = {
+            "events": [
+                { "id": 1, "name": "Event 1" },
+                { "id": 2, "name": "Event 2" },
+                { "id": 3, "name": "Event 3" },
+                { "id": 4, "name": "Event 4" },
+                { "id": 5, "name": "Event 5" }
+            ]
+        }
+        result = clear_events_up_to_last(data)
+        expect = { "id": 5, "name": "Event 5" } 
         self.assertEqual(result, expect)
