@@ -20,6 +20,10 @@ async def get_todays_weather_temp_for_location(location: str):
 def fetch_weather(location: str, operation=get_todays_weather_temp_for_location):
     return asyncio.run(operation(location))
 
+def get_system_current_date_and_time():
+    import datetime
+    return datetime.datetime.now()
+
 ## Pure functions
 def count_words(text):
     return len(text.split())
@@ -32,3 +36,6 @@ def add_port_number(ip_address, port_number):
 
 def todays_location_and_temperature_forecast(weather_data):
     return f"The temperature for today in {weather_data.region} is {weather_data.temperature} degrees"
+
+def current_formatted_date_and_time(io_data):
+    return f"Today's date is {io_data.strftime('%Y-%m-%d')} and the time is {io_data.strftime('%H:%M')}"

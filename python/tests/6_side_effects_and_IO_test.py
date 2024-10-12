@@ -10,6 +10,8 @@ from pure_functions.side_effects_and_IO import (
     add_port_number,
     fetch_weather,
     todays_location_and_temperature_forecast,
+    get_system_current_date_and_time,
+    current_formatted_date_and_time,
 )
 
 class TestSideEffectsAndIO(unittest.TestCase):
@@ -37,4 +39,11 @@ class TestSideEffectsAndIO(unittest.TestCase):
         michigan_weather_data = fetch_weather('Michigan')
         result = todays_location_and_temperature_forecast(michigan_weather_data)
         expect = f"The temperature for today in Michigan is {michigan_weather_data.temperature} degrees"
+        self.assertEqual(result, expect)
+
+    def test_get_date_and_time(self):
+        import datetime
+        io_data = get_system_current_date_and_time()
+        result = current_formatted_date_and_time(io_data)
+        expect = f"Today's date is {datetime.datetime.now().date()} and the time is {datetime.datetime.now().strftime('%H:%M')}"
         self.assertEqual(result, expect)

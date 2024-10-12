@@ -98,3 +98,6 @@ Okay, so maybe I haven't been currying. I just realized I largely misunderstood 
 
 ### Day 33: Friday, October 11, 2024 - Immutability & Data Transformations 
 Passing an input of a dictionary that contains a list of dictionaries for a bunch of events. The goal is to delete all the event entries except for the last one. Instead of taking the data structure and modifying the original, we get a copy of it and slice the entries out except for the last one to return a new data structure for events. 
+
+### Day 34: Saturday, October 12, 2024 - Side Effects & IO
+Keeping it super simple today. Today I use a side effect or impure function to grab the systems current date and time, then pass the data over to a pure function that formats the data for a string output. I isolate the datetime system calls to one being used in the unit test and one being called with a module function that then passes the data to a pure function. I could have just used the datetime in the unit test, but I wanted to practice this as a process in functional programming. The string output that comes from the pure function could be used by passing it to another side effect.  
