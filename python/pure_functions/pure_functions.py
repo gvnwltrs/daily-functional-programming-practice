@@ -20,4 +20,4 @@ def calculate_speed(distance: int, time: int) -> int:
     return distance / time
 
 def strip_numbers(name: str) -> str:
-    return ''.join([i for i in name if not i.isdigit()])
+    return ''.join([i for i in name if not i.isdigit()]) ## add i for i in list if i is not a number

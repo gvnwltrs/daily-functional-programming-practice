@@ -4,6 +4,8 @@ from higher_order_functions.higher_order_functions import (
     get_cubed,
     turn_off_air_conditioner,
     select_investment_temperament,
+    get_email_subscriber,
+    plan_email_with_coupon_code,
 )
 
 from higher_order_functions.other import (
@@ -49,4 +51,18 @@ class TestHigherOrderFunctions(unittest.TestCase):
     def test_investment_balancer(self):
         result = select_investment_temperament()
         expect = "Conservative: 20% stocks, 80% bonds"
+        self.assertEqual(result, expect)
+
+    def test_plan_to_email_coupons(self):
+        subscribers = {
+            "subscriber_id_1": {"firstname": "John",  "lastname": "Smith", "email": "johnsmith@lol.com", "referral_count": 10}, 
+            "subscriber_id_2": {"firstname": "Jane",  "lastname": "Smith", "email": "janesmith@lol.com", "referral_count": 5}, 
+        }
+        result = plan_email_with_coupon_code(get_email_subscriber(subscribers))
+        expect = {
+            "from": "newsletter@coupondepot.co", 
+            "to": "johnsmith@lol.com",
+            "subject": "Your coupons are here!",
+            "body": "Here are your coupons John: use code [ 10PERCENTOFF ] on your next purchase!"
+        }
         self.assertEqual(result, expect)
