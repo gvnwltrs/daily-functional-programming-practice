@@ -3,6 +3,7 @@ from recursion.looping_and_conditionals import print_loop, ordered_list, setup_p
 from recursion.recursion import (
     calculate_average,
     high_payment_events,
+    calculate_sum,
 )
 
 class TestRecursion(unittest.TestCase):
@@ -47,3 +48,8 @@ class TestRecursion(unittest.TestCase):
         expect = 4
         self.assertEqual(result, expect)
 
+    def test_sum(self):
+        data = [1, 2, 3, 4, 5]
+        result = calculate_sum(data)
+        expect = 15 
+        self.assertEqual(result, expect)
