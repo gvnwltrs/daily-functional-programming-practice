@@ -19,3 +19,21 @@ def calculate_sales_price(price):
 
 def clear_events_up_to_last(data):
     return data['events'][-1]
+
+def build_email_message_for_recent_purchase(message_structure):
+    def message_to(sender):
+        def message_from(from_):
+            def message_subject(subject):
+                def message_body(body):
+                    def message():
+                        message_structure_copy = message_structure.copy()
+                        message_structure_copy['to'] = sender 
+                        message_structure_copy['from'] = from_
+                        message_structure_copy['subject'] = subject
+                        message_structure_copy['body'] = body
+                        return message_structure_copy
+                    return message
+                return message_body
+            return message_subject
+        return message_from
+    return message_to

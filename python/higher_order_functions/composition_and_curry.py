@@ -41,3 +41,12 @@ def generate_size_and_weight_profile_enhanced(size_output: Callable[[int], int],
 
 def curry_add(a):
     return lambda b: lambda c: a + b + c
+
+def build_sentence(input):
+    def sentence_1(input_1):
+        def sentence_2(input_2):
+            def sentence_3(input_3):
+                return input_1 + input_2 + input_3
+            return sentence_3
+        return sentence_2
+    return sentence_1(input)

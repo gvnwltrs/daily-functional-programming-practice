@@ -8,6 +8,7 @@ from higher_order_functions.composition_and_curry import (
     generate_size_output,
     generate_weight_output,
     curry_add,
+    build_sentence, 
 )
 
 from higher_order_functions.other import ask_question, now_handle_the_question 
@@ -65,4 +66,11 @@ class TestCompositionAndCurry(unittest.TestCase):
         add_two = add_one(2)
         result = add_two(4)
         expect = 7 
+        self.assertTrue(result == expect)
+
+    def test_sentence_builder(self):
+        sentence_1 = build_sentence("Hello, my name is ")
+        sentence_2 = sentence_1("John Smith, ")
+        result = sentence_2("and I am 30 years old.") 
+        expect = "Hello, my name is John Smith, and I am 30 years old."
         self.assertTrue(result == expect)

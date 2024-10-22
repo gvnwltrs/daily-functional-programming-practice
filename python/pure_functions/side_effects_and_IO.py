@@ -24,6 +24,14 @@ def get_system_current_date_and_time():
     import datetime
     return datetime.datetime.now()
 
+def get_emails_from_file():
+    emails = []
+    with open('resources/file.txt') as file:
+        for line in file:
+            if 'email' in line or 'username' in line:
+                emails.append(line.strip())  
+        return emails 
+
 ## Pure functions
 def count_words(text):
     return len(text.split())
@@ -39,3 +47,13 @@ def todays_location_and_temperature_forecast(weather_data):
 
 def current_formatted_date_and_time(io_data):
     return f"Today's date is {io_data.strftime('%Y-%m-%d')} and the time is {io_data.strftime('%H:%M')}"
+
+def generate_email_list(emails):
+    email_list = {}
+    current_username = ''
+    for email in emails:
+        if 'username' in email:
+            current_username = email.split(':')[1].strip()
+        elif 'email' in email:
+            email_list[current_username] = email.split(':')[1].strip()
+    return email_list

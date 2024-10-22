@@ -6,6 +6,7 @@ from pure_functions.immutability_and_data_structures import (
     update_order_numbers,
     calculate_sales_price, 
     clear_events_up_to_last, 
+    build_email_message_for_recent_purchase,
 )
 
 class TestImmutabilityAndDataStructures(unittest.TestCase):
@@ -65,3 +66,24 @@ class TestImmutabilityAndDataStructures(unittest.TestCase):
         result = clear_events_up_to_last(data)
         expect = { "id": 5, "name": "Event 5" } 
         self.assertEqual(result, expect)
+    
+    def test_buld_email_message(self):
+        email_message_template = {
+            "to": "",
+            "from": "",
+            "subject": "",
+            "body": ""
+        }
+        email_to = build_email_message_for_recent_purchase(email_message_template)("johnsmith@lol.com")
+        email_from = email_to("sales@widgets.com") 
+        email_subject = email_from("Thank You!")
+        email_body = email_subject("Thank you for your recent purchase of a Widget! We hope you enjoy it!")
+        result = email_body()
+        expect = {
+            "to": "johnsmith@lol.com", 
+            "from": "sales@widgets.com",
+            "subject": "Thank You!",
+            "body": "Thank you for your recent purchase of a Widget! We hope you enjoy it!"
+        }
+        self.assertEqual(result, expect)
+        # self.assertIsNot(email_message_template, result)

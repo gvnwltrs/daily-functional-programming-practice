@@ -112,3 +112,12 @@ Using higher-order functions is pretty fun. There are so many ways you can refac
 
 ### Day 38: Wednesday, October 16, 2024 - Recursion
 Lazy approach today. Just doing a recursive sum calculation based on a list of numbers. Ideally, there should be some implementation of Tail Call Optimization (TCO), where the calculation is tracked and a new stack is used recursively to prevent a stack overflow in the event the list is very large since its size complexity is O(n). 
+
+### Day 39 Thursday, October 17, 2024 - Function Composition & Currying
+Built a simple curried sentence builder, where each successive input builds out the sentence. 
+
+### Day 40 Friday, October 18, 2024 - Immutability & Data Transformations 
+Just made a simple email message builder, a shallow copy, and some currying to implement it all. Not very pretty looking, but it works and this helps with practicing currying a little more. 
+
+### Day 41 Saturday, October 19, 2024 - Side Effects & IO 
+Made another email list output. The side-effect gets the usernames and emails from a txt file, then the pure function (calculation) extracts the username and email to output all of them as a dictionary (JSON). 
