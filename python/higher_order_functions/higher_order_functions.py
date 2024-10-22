@@ -2,6 +2,8 @@ from typing import Callable
 
 # Data
 
+# Actions
+
 # Calculations 
 def square_calc(x):
     return x * x
@@ -47,5 +49,8 @@ def plan_email_with_coupon_code(func: Callable[[dict], str], coupon=selectCoupon
     }
     return email 
 
-# Actions
+def hyphenate_phone_numbers(phone_numbers: dict, formatted_numbers={}):
+    return {key: value.replace(' ', '-').replace('.', '-') for key, value in phone_numbers.items()} 
 
+def format_phone_numbers(phone_numbers, func=hyphenate_phone_numbers):
+    return func(phone_numbers) 

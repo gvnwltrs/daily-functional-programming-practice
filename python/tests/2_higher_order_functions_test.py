@@ -6,6 +6,7 @@ from higher_order_functions.higher_order_functions import (
     select_investment_temperament,
     get_email_subscriber,
     plan_email_with_coupon_code,
+    format_phone_numbers,
 )
 
 from higher_order_functions.other import (
@@ -64,5 +65,19 @@ class TestHigherOrderFunctions(unittest.TestCase):
             "to": "johnsmith@lol.com",
             "subject": "Your coupons are here!",
             "body": "Here are your coupons John: use code [ 10PERCENTOFF ] on your next purchase!"
+        }
+        self.assertEqual(result, expect)
+
+    def test_correct_phone_number_formats(self):
+        contacts = {
+            'contact_1': '123.456.7890', 
+            'contact_2': '123-456-7890',
+            'contact_3': '123.456.7890',
+        }
+        result = format_phone_numbers(contacts)
+        expect = {
+            'contact_1': '123-456-7890', 
+            'contact_2': '123-456-7890',
+            'contact_3': '123-456-7890',
         }
         self.assertEqual(result, expect)

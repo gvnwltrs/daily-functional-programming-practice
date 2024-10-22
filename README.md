@@ -127,3 +127,5 @@ Made another email list output. The side-effect gets the usernames and emails fr
 ### Day 43 Monday, October 21, 2024 - Pure Functions
 Built a feature to set up a Class C IP Address using a single argument for the last octet, or a two argument input to set a subnet with the last octet. 
 
+### Day 44 Tuesday, October 22, 2024 - Higher-Order Functions
+Created a higher-order function that formats a collection of phone numbers with '-' where needed. The function simply takes a collection of phone numbers as a single input with the optional second input set to a default input function that is for '-' formatting. This way, if future implementations are needed to format phone numbers in a particular way, it can simply be used as input for the second argument. 
