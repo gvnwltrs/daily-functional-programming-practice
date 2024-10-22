@@ -21,3 +21,6 @@ def calculate_speed(distance: int, time: int) -> int:
 
 def strip_numbers(name: str) -> str:
     return ''.join([i for i in name if not i.isdigit()]) ## add i for i in list if i is not a number
+
+def set_class_c_ip_address(last_octet: int, subnet: int=0) -> str:
+    return f'192.168.{subnet}.{last_octet}'

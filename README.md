@@ -121,3 +121,9 @@ Just made a simple email message builder, a shallow copy, and some currying to i
 
 ### Day 41 Saturday, October 19, 2024 - Side Effects & IO 
 Made another email list output. The side-effect gets the usernames and emails from a txt file, then the pure function (calculation) extracts the username and email to output all of them as a dictionary (JSON). 
+
+### Day 42 Sunday, October 20, 2024 - Rest 
+
+### Day 43 Monday, October 21, 2024 - Pure Functions
+Built a feature to set up a Class C IP Address using a single argument for the last octet, or a two argument input to set a subnet with the last octet. 
+

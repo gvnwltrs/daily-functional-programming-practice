@@ -7,6 +7,7 @@ from pure_functions.pure_functions import (
     see_if_username_exists,
     calculate_speed,
     strip_numbers,
+    set_class_c_ip_address,
 )
 
 from pure_functions.other import (
@@ -61,4 +62,8 @@ class TestPureFunctions(unittest.TestCase):
         expect = 'John'
         self.assertEqual(result, expect)
 
+    def test_set_ip_address(self):
+        result = set_class_c_ip_address(100)
+        expect = '192.168.0.100'
+        self.assertEqual(result, expect)
 

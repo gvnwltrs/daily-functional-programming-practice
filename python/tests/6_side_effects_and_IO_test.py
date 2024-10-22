@@ -37,11 +37,12 @@ class TestSideEffectsAndIO(unittest.TestCase):
         expect = ip_address + ':80'
         self.assertEqual(test, expect)
 
-    # def test_get_weather_temp_for_location(self):
-    #     michigan_weather_data = fetch_weather('Michigan')
-    #     result = todays_location_and_temperature_forecast(michigan_weather_data)
-    #     expect = f"The temperature for today in Michigan is {michigan_weather_data.temperature} degrees"
-    #     self.assertEqual(result, expect)
+    @unittest.skip("Skipping this test because it requires an internet connection")
+    def test_get_weather_temp_for_location(self):
+        michigan_weather_data = fetch_weather('Michigan')
+        result = todays_location_and_temperature_forecast(michigan_weather_data)
+        expect = f"The temperature for today in Michigan is {michigan_weather_data.temperature} degrees"
+        self.assertEqual(result, expect)
 
     def test_get_date_and_time(self):
         import datetime
