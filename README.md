@@ -129,3 +129,6 @@ Built a feature to set up a Class C IP Address using a single argument for the l
 
 ### Day 44 Tuesday, October 22, 2024 - Higher-Order Functions
 Created a higher-order function that formats a collection of phone numbers with '-' where needed. The function simply takes a collection of phone numbers as a single input with the optional second input set to a default input function that is for '-' formatting. This way, if future implementations are needed to format phone numbers in a particular way, it can simply be used as input for the second argument. 
+
+### Day 45 Wednesday, October 23, 2024 - Recursion
+Made up a mock program load sequence that uses recursion for each load stage based on a tracking value known as "stage". Theoretically, this can be expanded on to implement other functions that handle some operation or sub-routine at each stage. The final output is a log dictionary that could then be used as a signal or info to launch other events based on its values.  

@@ -4,6 +4,7 @@ from recursion.recursion import (
     calculate_average,
     high_payment_events,
     calculate_sum,
+    load_program,
 )
 
 class TestRecursion(unittest.TestCase):
@@ -52,4 +53,13 @@ class TestRecursion(unittest.TestCase):
         data = [1, 2, 3, 4, 5]
         result = calculate_sum(data)
         expect = 15 
+        self.assertEqual(result, expect)
+
+    def test_load_procedure(self):
+        result = load_program("default")
+        expect = {
+            "name": "default",
+            "version": 1.0,
+            "status": "loaded"
+        }
         self.assertEqual(result, expect)
