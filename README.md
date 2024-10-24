@@ -132,3 +132,6 @@ Created a higher-order function that formats a collection of phone numbers with 
 
 ### Day 45 Wednesday, October 23, 2024 - Recursion
 Made up a mock program load sequence that uses recursion for each load stage based on a tracking value known as "stage". Theoretically, this can be expanded on to implement other functions that handle some operation or sub-routine at each stage. The final output is a log dictionary that could then be used as a signal or info to launch other events based on its values.  
+
+### Day 46 Thursday, October 24, 2024 - Composition & Currying
+Composition is pretty straightforward. I am focusing on more currying today to apply it to hopefully identify situations that could use currying for refactoring better. I learned that what I have been doing for "currying" before was actually a partial function since I was prefilling the return of an inner function with the initial argument in the first call. So I made 2 versions, one partial, one curry to make sure I understand the difference. This was just a function that sets up a sales tax for a particular state so that a total price can be given including the sales tax. 

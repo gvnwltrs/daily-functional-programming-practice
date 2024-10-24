@@ -9,6 +9,8 @@ from higher_order_functions.composition_and_curry import (
     generate_weight_output,
     curry_add,
     build_sentence, 
+    generate_sales_total_for_state_partial,
+    generate_sales_total_for_state_curried,
 )
 
 from higher_order_functions.other import ask_question, now_handle_the_question 
@@ -59,7 +61,7 @@ class TestCompositionAndCurry(unittest.TestCase):
         add_1_and_2 = curry_add(1)(2)
         final = add_1_and_2(3)
         expect = 6
-        self.assertTrue(final == expect)
+        self.assertEqual(final, expect)
 
     def test_curried_adding_all_3_then_another_input(self):
         add_one = curry_add(1)
@@ -73,4 +75,36 @@ class TestCompositionAndCurry(unittest.TestCase):
         sentence_2 = sentence_1("John Smith, ")
         result = sentence_2("and I am 30 years old.") 
         expect = "Hello, my name is John Smith, and I am 30 years old."
-        self.assertTrue(result == expect)
+        self.assertEqual(result, expect)
+    
+    def test_total_sale_price_with_sales_tax_for_state_partial(self):
+        state_sales_tax = {
+            "CA": 0.075,
+            "NY": 0.045,
+            "TX": 0.0625
+        }
+        items = {
+            "item_1": 10,
+            "item_2": 20,
+            "item_3": 30
+        }
+        texas_sales_total_plus_tax = generate_sales_total_for_state_partial(state_sales_tax["TX"])
+        result = texas_sales_total_plus_tax(items)
+        expect = 63.75
+        self.assertEqual(result, expect)
+    
+    def test_total_sale_price_with_sales_tax_for_state(self):
+        state_sales_tax = {
+            "CA": 0.075,
+            "NY": 0.045,
+            "TX": 0.0625
+        }
+        items = {
+            "item_1": 10,
+            "item_2": 20,
+            "item_3": 30
+        }
+        texas_sales_total_plus_tax = generate_sales_total_for_state_curried(state_sales_tax["TX"])
+        result = texas_sales_total_plus_tax(items)
+        expect = 63.75
+        self.assertEqual(result, expect)

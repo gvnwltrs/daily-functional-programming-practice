@@ -1,4 +1,5 @@
 from typing import Callable
+from functools import reduce
 
 # Pure Functions
 def square(x):
@@ -50,3 +51,17 @@ def build_sentence(input):
             return sentence_3
         return sentence_2
     return sentence_1(input)
+
+def generate_sales_total_for_state_partial(state_tax):
+    def state_sales_tax(tax_for_state):
+        def sales_total(items):
+            sub_total =  reduce(lambda total, item_price: total + item_price, items.values(), 0)
+            return sub_total + (sub_total * tax_for_state)
+        return sales_total
+    return state_sales_tax(state_tax) # filling in the input for the inner function, which makes this a partial function
+
+def generate_sales_total_for_state_curried(state_tax):
+    def sales_total(items):
+        sub_total =  reduce(lambda total, item_price: total + item_price, items.values(), 0)
+        return sub_total + (sub_total * state_tax)
+    return sales_total
